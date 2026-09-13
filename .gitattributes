@@ -1,0 +1,6 @@
+# Los finales de línea se normalizan a LF en todo el repositorio.
+# En Windows, core.autocrlf=true reescribe los archivos con CRLF al hacer
+# checkout: el archivo local y el del repositorio (y el que sirve GitHub Pages)
+# dejaban de coincidir byte a byte, y `git status` los marcaba como modificados
+# sin que su contenido hubiera cambiado. Con eol=lf eso no pasa.
+* text=auto eol=lf
