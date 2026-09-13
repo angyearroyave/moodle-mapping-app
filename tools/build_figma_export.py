@@ -516,7 +516,7 @@ def main():
     for id_seccion, pestana, rol, archivo, titulo in PANTALLAS:
         seccion = ajustar(id_seccion, limpiar_seccion(secciones[id_seccion]))
         pagina = construir(comunes, seccion, rol, pestana, "Pantalla %s" % titulo)
-        (DESTINO / archivo).write_text(pagina, encoding="utf-8")
+        (DESTINO / archivo).write_text(pagina, encoding="utf-8", newline="\n")
         generadas.append((archivo, "Pantalla %s" % titulo,
                           "archivo estático, listo para importar"))
 
@@ -526,7 +526,7 @@ def main():
         pestana, rol = next((p[1], p[2]) for p in PANTALLAS if p[3] == archivo_base)
         seccion = transformar(ajustar(id_seccion, limpiar_seccion(secciones[id_seccion])))
         pagina = construir(comunes, seccion, rol, pestana, titulo)
-        (DESTINO / "estados" / archivo).write_text(pagina, encoding="utf-8")
+        (DESTINO / "estados" / archivo).write_text(pagina, encoding="utf-8", newline="\n")
         estados_generados.append((archivo, titulo, nota))
 
     filas_pantallas = "".join(
@@ -538,7 +538,8 @@ def main():
         '          <p class="record-marks">%s</p>\n        </div>\n' % (a, t, n)
         for a, t, n in estados_generados)
     (DESTINO / "index.html").write_text(
-        archivo_catalogo(comunes, filas_pantallas, filas_estados), encoding="utf-8")
+        archivo_catalogo(comunes, filas_pantallas, filas_estados), encoding="utf-8",
+        newline="\n")
 
     print("%d pantallas en figma/, %d estados en figma/estados/, más figma/index.html"
           % (len(generadas), len(estados_generados)))
