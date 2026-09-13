@@ -104,8 +104,8 @@
 /* ── base ─────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 
-/* Se oculta con hidden, nunca con display:none en línea. */
-[hidden] { display: none !important; }
+/* Se oculta con , nunca con display:none en línea. */
+[] { display: none !important; }
 
 html { -webkit-text-size-adjust: 100%; }
 
@@ -147,7 +147,7 @@ legend { padding: 0; }
   position: absolute;
   width: 1px; height: 1px;
   margin: -1px; padding: 0;
-  overflow: hidden;
+  overflow: ;
   clip-path: inset(50%);
   white-space: nowrap;
 }
@@ -431,7 +431,7 @@ strong, b { font-weight: var(--fw-bold); }
 }
 .time-figure .num { font-weight: var(--fw-light); }
 .time-of { font-size: var(--fs-body); font-weight: var(--fw-normal); color: var(--muted); }
-.bar { margin: var(--sp-4) 0 var(--sp-3); height: 14px; border-radius: var(--r-pill); background: var(--surface-2); overflow: hidden; }
+.bar { margin: var(--sp-4) 0 var(--sp-3); height: 14px; border-radius: var(--r-pill); background: var(--surface-2); overflow: ; }
 .bar-fill { height: 100%; width: var(--valor, 0%); border-radius: var(--r-pill); background: var(--fg); transition: width var(--t-state) ease, background var(--t-state) ease; }
 .bar--low .bar-fill { background: var(--signal); }
 .time-state { font-weight: var(--fw-semi); }
@@ -512,7 +512,7 @@ strong, b { font-weight: var(--fw-bold); }
           </fieldset>
 
           <div class="actions">
-            <button class="btn btn--primary" type="button" id="btn-guardar" data-action="guardar" data-foco="guardar"><span id="etiqueta-con">Guardar entrega</span><span id="etiqueta-sin" hidden>Guardar en este dispositivo</span></button>
+            <button class="btn btn--primary" type="button" id="btn-guardar" data-action="guardar" data-foco="guardar"><span id="etiqueta-con">Guardar entrega</span><span id="etiqueta-sin" >Guardar en este dispositivo</span></button>
           </div>
 
           <p class="answer" id="estado-entrega" role="status" aria-live="polite">Todavía no has guardado nada.</p>
@@ -529,11 +529,11 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 1 · Entrega sin conexión (docente) ════════════════════════════ -->
-    <section class="screen" id="pantalla-entrega-docente" data-od-id="pantalla-entrega-docente" hidden aria-labelledby="titulo-entrega-docente">
+    <section class="screen" id="pantalla-entrega-docente" data-od-id="pantalla-entrega-docente"  aria-labelledby="titulo-entrega-docente">
       <div class="stack">
         <div>
           <h1 id="titulo-entrega-docente">Entregas recibidas</h1>
-          <p class="lead">Ves lo mismo que ve cada estudiante: las dos marcas, sin ninguna columna extra.</p>
+          <p class="lead">Ves lo mismo que ve cada estudiante: las dos marcas, sin columnas extra.</p>
         </div>
 
         <div class="block" data-od-id="grupo-entregas">
@@ -567,7 +567,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 2 · Estado del curso (estudiante) ═════════════════════════════ -->
-    <section class="screen" id="pantalla-curso" data-od-id="pantalla-curso" hidden aria-labelledby="titulo-curso">
+    <section class="screen" id="pantalla-curso" data-od-id="pantalla-curso"  aria-labelledby="titulo-curso">
       <div class="stack">
         <div>
           <h1 id="titulo-curso">Estado del curso</h1>
@@ -614,7 +614,7 @@ strong, b { font-weight: var(--fw-bold); }
                 <p class="route-num">Ítem 4</p>
                 <h3>Foro de la unidad</h3>
               </div>
-              <span class="badge badge--blocked" id="item-4-badge"><span class="mark" aria-hidden="true">▪</span>Bloqueado</span>
+              <span class="badge badge--blocked" id="item-4-badge"><span class="mark" aria-="true">▪</span>Bloqueado</span>
             </div>
             <div class="reason" id="item-4-motivo">
               <p>¿Por qué está bloqueado el foro? Se abre cuando las dos lecturas estén hechas. Te falta la Lectura 2. No está escondido: está aquí, con el motivo y con lo que falta.</p>
@@ -644,7 +644,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 2 · Estado del curso (docente) ════════════════════════════════ -->
-    <section class="screen" id="pantalla-curso-docente" data-od-id="pantalla-curso-docente" hidden aria-labelledby="titulo-curso-docente">
+    <section class="screen" id="pantalla-curso-docente" data-od-id="pantalla-curso-docente"  aria-labelledby="titulo-curso-docente">
       <div class="stack">
         <div>
           <h1 id="titulo-curso-docente">Estado del grupo</h1>
@@ -660,7 +660,7 @@ strong, b { font-weight: var(--fw-bold); }
               <p class="group-marks">
                 <span class="badge badge--done">3 hechos</span>
                 <span class="badge badge--todo">1 falta</span>
-                <span class="badge badge--blocked"><span class="mark" aria-hidden="true">▪</span>1 bloqueado</span>
+                <span class="badge badge--blocked"><span class="mark" aria-="true">▪</span>1 bloqueado</span>
               </p>
               <p class="record-marks">Le falta el cuestionario. El foro sigue bloqueado: le falta un ítem hecho.</p>
             </li>
@@ -677,7 +677,7 @@ strong, b { font-weight: var(--fw-bold); }
               <p class="group-marks">
                 <span class="badge badge--done">2 hechos</span>
                 <span class="badge badge--wait">Sin subir <span class="mark">hecho 6:20 p.m.</span></span>
-                <span class="badge badge--blocked"><span class="mark" aria-hidden="true">▪</span>1 bloqueado</span>
+                <span class="badge badge--blocked"><span class="mark" aria-="true">▪</span>1 bloqueado</span>
               </p>
               <p class="record-marks">Tiene una entrega sin subir: se hizo a las 6:20 p.m. y todavía no hay señal.</p>
             </li>
@@ -715,7 +715,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 3 · Tiempo disponible (estudiante) ════════════════════════════ -->
-    <section class="screen" id="pantalla-tiempo" data-od-id="pantalla-tiempo" hidden aria-labelledby="titulo-tiempo">
+    <section class="screen" id="pantalla-tiempo" data-od-id="pantalla-tiempo"  aria-labelledby="titulo-tiempo">
       <div class="stack">
         <div>
           <h1 id="titulo-tiempo">Tiempo disponible</h1>
@@ -729,7 +729,7 @@ strong, b { font-weight: var(--fw-bold); }
             <div class="bar-fill" id="barra-relleno"></div>
           </div>
 
-          <p class="time-state" id="tiempo-estado"><span class="mark" aria-hidden="true">●</span> El tiempo está corriendo.</p>
+          <p class="time-state" id="tiempo-estado"><span class="mark" aria-="true">●</span> El tiempo está corriendo.</p>
           <p class="note">Se descuenta solo mientras estás dentro de la unidad. Fuera de línea no corre.</p>
           <p class="note">En este prototipo 1 segundo equivale a 1 minuto de trabajo, para que se vea cómo corre. La conexión se cambia en la pantalla «Entrega».</p>
 
@@ -737,7 +737,7 @@ strong, b { font-weight: var(--fw-bold); }
             <button class="btn btn--secondary" type="button" id="btn-motivos" data-action="motivos" aria-expanded="false" aria-controls="panel-motivos">Solicitar más tiempo</button>
           </div>
 
-          <div class="band" id="panel-motivos" hidden>
+          <div class="band" id="panel-motivos" >
             <p class="field-title">¿Por qué necesitas más tiempo? Elige el motivo.</p>
             <div class="motives">
               <button class="btn btn--option" type="button" data-action="motivo" data-motivo="conexion">No tuve señal</button>
@@ -748,7 +748,7 @@ strong, b { font-weight: var(--fw-bold); }
             <p class="note">Un clic. No hay campo de texto ni explicación que escribir.</p>
           </div>
 
-          <div class="band answer" id="respuesta" role="status" aria-live="polite" hidden></div>
+          <div class="band answer" id="respuesta" role="status" aria-live="polite" ></div>
 
           <template id="tpl-conexion">
             <p><span class="badge badge--done">Tiempo sumado</span></p>
@@ -772,7 +772,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 3 · Tiempo disponible (docente) ═══════════════════════════════ -->
-    <section class="screen" id="pantalla-tiempo-docente" data-od-id="pantalla-tiempo-docente" hidden aria-labelledby="titulo-tiempo-docente">
+    <section class="screen" id="pantalla-tiempo-docente" data-od-id="pantalla-tiempo-docente"  aria-labelledby="titulo-tiempo-docente">
       <div class="stack">
         <div>
           <h1 id="titulo-tiempo-docente">Solicitudes de tiempo</h1>
@@ -802,7 +802,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 4 · Flujo de la entrega diferida (estudiante) ═════════════════ -->
-    <section class="screen" id="pantalla-flujo" data-od-id="pantalla-flujo" hidden aria-labelledby="titulo-flujo">
+    <section class="screen" id="pantalla-flujo" data-od-id="pantalla-flujo"  aria-labelledby="titulo-flujo">
       <div class="stack">
         <div>
           <h1 id="titulo-flujo">Cómo se guarda y se sube</h1>
@@ -811,7 +811,7 @@ strong, b { font-weight: var(--fw-bold); }
 
         <ol class="steps" data-od-id="pasos">
           <li class="step" id="paso-1">
-            <span class="step-index" aria-hidden="true">1</span>
+            <span class="step-index" aria-="true">1</span>
             <div class="step-body">
               <h2>Escribes</h2>
               <p class="note">Con o sin señal. Nada se pierde por estar sin conexión.</p>
@@ -819,7 +819,7 @@ strong, b { font-weight: var(--fw-bold); }
             </div>
           </li>
           <li class="step" id="paso-2">
-            <span class="step-index" aria-hidden="true">2</span>
+            <span class="step-index" aria-="true">2</span>
             <div class="step-body">
               <h2>Se guarda en este teléfono</h2>
               <p class="note" id="paso-2-nota">Al guardar queda aquí, con la hora de tu reloj.</p>
@@ -827,7 +827,7 @@ strong, b { font-weight: var(--fw-bold); }
             </div>
           </li>
           <li class="step" id="paso-3">
-            <span class="step-index" aria-hidden="true">3</span>
+            <span class="step-index" aria-="true">3</span>
             <div class="step-body">
               <h2>Vuelve la señal y se sube sola</h2>
               <p class="note">No hay que volver a guardar ni buscar señal.</p>
@@ -835,7 +835,7 @@ strong, b { font-weight: var(--fw-bold); }
             </div>
           </li>
           <li class="step" id="paso-4">
-            <span class="step-index" aria-hidden="true">4</span>
+            <span class="step-index" aria-="true">4</span>
             <div class="step-body">
               <h2>Queda registrado con dos marcas</h2>
               <p class="note">La hora en que lo hiciste y la hora en que llegó.</p>
@@ -853,7 +853,7 @@ strong, b { font-weight: var(--fw-bold); }
     </section>
 
     <!-- ══ 4 · Flujo de la entrega diferida (docente) ════════════════════ -->
-    <section class="screen" id="pantalla-flujo-docente" data-od-id="pantalla-flujo-docente" hidden aria-labelledby="titulo-flujo-docente">
+    <section class="screen" id="pantalla-flujo-docente" data-od-id="pantalla-flujo-docente"  aria-labelledby="titulo-flujo-docente">
       <div class="stack">
         <div>
           <h1 id="titulo-flujo-docente">La entrega diferida, del lado del docente</h1>
@@ -862,28 +862,28 @@ strong, b { font-weight: var(--fw-bold); }
 
         <ol class="steps">
           <li class="step">
-            <span class="step-index" aria-hidden="true">1</span>
+            <span class="step-index" aria-="true">1</span>
             <div class="step-body">
               <h2>Se escribe cuando se puede</h2>
               <p class="note">Con señal o sin señal: el trabajo no depende de la red.</p>
             </div>
           </li>
           <li class="step">
-            <span class="step-index" aria-hidden="true">2</span>
+            <span class="step-index" aria-="true">2</span>
             <div class="step-body">
               <h2>Se guarda en el teléfono</h2>
               <p class="note">Con la hora local, aunque no haya con quién hablar.</p>
             </div>
           </li>
           <li class="step">
-            <span class="step-index" aria-hidden="true">3</span>
+            <span class="step-index" aria-="true">3</span>
             <div class="step-body">
               <h2>Llega cuando vuelve la señal</h2>
               <p class="note">Sin que nadie tenga que volver a guardar ni avisar.</p>
             </div>
           </li>
           <li class="step">
-            <span class="step-index" aria-hidden="true">4</span>
+            <span class="step-index" aria-="true">4</span>
             <div class="step-body">
               <h2>Tú ves las dos horas</h2>
               <p class="note">Cuándo se hizo y cuándo llegó. Con eso puedes leer el contexto, no solo el retraso.</p>
@@ -1037,8 +1037,8 @@ strong, b { font-weight: var(--fw-bold); }
     ['entrega', 'curso', 'tiempo', 'flujo'].forEach(function (p) {
       var a = $('pantalla-' + p), b = $('pantalla-' + p + '-docente');
       var activa = (p === estado.pantalla);
-      if (a) { a.hidden = !(activa && estado.rol === 'estudiante'); }
-      if (b) { b.hidden = !(activa && estado.rol === 'docente'); }
+      if (a) { a. = !(activa && estado.rol === 'estudiante'); }
+      if (b) { b. = !(activa && estado.rol === 'docente'); }
     });
 
     var tabs = document.querySelectorAll('.tab');
@@ -1052,8 +1052,8 @@ strong, b { font-weight: var(--fw-bold); }
 
     el.conSi.setAttribute('aria-pressed', estado.enLinea ? 'true' : 'false');
     el.conNo.setAttribute('aria-pressed', estado.enLinea ? 'false' : 'true');
-    $('etiqueta-con').hidden = !estado.enLinea;
-    $('etiqueta-sin').hidden = estado.enLinea;
+    $('etiqueta-con'). = !estado.enLinea;
+    $('etiqueta-sin'). = estado.enLinea;
     el.estadoEntrega.textContent = textoEstadoEntrega();
     el.registros.setAttribute('aria-busy', estado.subiendo ? 'true' : 'false');
 
@@ -1107,9 +1107,9 @@ strong, b { font-weight: var(--fw-bold); }
   function pintarRegistros() {
     el.registros.innerHTML = '';
     if (!estado.registros.length) {
-      el.vacio.hidden = false;
+      el.vacio. = false;
     } else {
-      el.vacio.hidden = true;
+      el.vacio. = true;
       estado.registros.slice().reverse().forEach(function (r) {
         el.registros.appendChild(filaRegistro(r));
       });
@@ -1149,7 +1149,7 @@ strong, b { font-weight: var(--fw-bold); }
     el.barra.setAttribute('aria-valuetext', 'Te quedan ' + fmtDur(restante) + ' de ' + fmtDur(estado.total));
     el.barra.classList.toggle('bar--low', restante <= 30);
 
-    var pausa = !estado.enLinea ? 'sin señal' : (document.hidden ? 'la unidad no está abierta' : null);
+    var pausa = !estado.enLinea ? 'sin señal' : (document. ? 'la unidad no está abierta' : null);
     if (restante <= 0) {
       el.tiempoEstado.textContent = '■ Se acabó el tiempo de trabajo de esta unidad. Puedes pedir más sin explicar por qué.';
       el.tiempoEstado.className = 'time-state time-state--paused';
@@ -1326,8 +1326,8 @@ strong, b { font-weight: var(--fw-bold); }
     var tpl = $('tpl-' + (tipo === 'conexion' ? 'conexion' : 'docente'));
     el.respuesta.innerHTML = '';
     el.respuesta.appendChild(tpl.content.cloneNode(true));
-    el.respuesta.hidden = false;
-    el.panelMotivos.hidden = true;
+    el.respuesta. = false;
+    el.panelMotivos. = true;
     el.btnMotivos.setAttribute('aria-expanded', 'false');
     if (tipo === 'conexion') {
       estado.restante += MIN_DIA * 2;
@@ -1391,7 +1391,7 @@ strong, b { font-weight: var(--fw-bold); }
   // ── el tiempo corre solo dentro de la unidad y con señal ───────────────
   var tics = 0;
   window.setInterval(function () {
-    if (document.hidden || !estado.enLinea || estado.restante <= 0) { return; }
+    if (document. || !estado.enLinea || estado.restante <= 0) { return; }
     estado.restante -= 1;
     tics += 1;
     pintarTiempo();
@@ -1420,8 +1420,8 @@ strong, b { font-weight: var(--fw-bold); }
     } else if (accion === 'guardar') {
       guardarEntrega();
     } else if (accion === 'motivos') {
-      var abierto = !el.panelMotivos.hidden;
-      el.panelMotivos.hidden = abierto;
+      var abierto = !el.panelMotivos.;
+      el.panelMotivos. = abierto;
       el.btnMotivos.setAttribute('aria-expanded', abierto ? 'false' : 'true');
       if (!abierto) {
         var primero = el.panelMotivos.querySelector('button');
@@ -1440,7 +1440,7 @@ strong, b { font-weight: var(--fw-bold); }
   el.borrador.addEventListener('change', function () { guardarEstado(); });
   document.addEventListener('visibilitychange', function () {
     pintarTiempo();
-    if (!document.hidden && estado.enLinea) { subir(); }
+    if (!document. && estado.enLinea) { subir(); }
   });
 
   // ── arranque ───────────────────────────────────────────────────────────
