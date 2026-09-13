@@ -1,0 +1,14 @@
+{
+  "name": "ruta-figma-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Construye el prototipo Ruta dentro de Figma como cuadros editables con auto-layout e interacciones.",
+  "scripts": {
+    "check": "tsc --noEmit",
+    "simular": "node simular.js"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.100.0",
+    "typescript": "^5.6.0"
+  }
+}

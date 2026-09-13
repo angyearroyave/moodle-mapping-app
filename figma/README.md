@@ -14,6 +14,18 @@ editable.
 Nada de esto toca el prototipo: `index.html` sigue igual, y sigue funcionando sin
 conexión.
 
+## Si el cupo de importaciones no alcanza
+
+El plan gratuito de html.to.design son **~10 importaciones cada 30 días**, y aquí
+hay 16 piezas. Para eso está el **plugin de Figma** de este mismo repositorio
+(`../figma-plugin/`): construye el prototipo **dentro** de Figma con piezas
+nativas —auto-layout, estilos locales y las interacciones ya conectadas—, no
+consume ninguna importación y funciona en cualquier plan de Figma. Instrucciones
+en `../figma-plugin/README.md`.
+
+Estos archivos siguen teniendo dos usos: son la referencia visual exacta del HTML
+y son la fuente desde la que se generan los datos del plugin.
+
 ---
 
 ## 1 · Las 8 pantallas
